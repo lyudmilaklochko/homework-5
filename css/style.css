@@ -2,12 +2,8 @@
   line-height: 1;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-.header {
-  padding-top: 23px;
-  margin-bottom: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -15,35 +11,52 @@
   padding: 0 10px;
   margin: 0 auto;
 }
+
+.header {
+  padding-top: 23px;
+  margin-bottom: 35px;
+}
+
 .header nav {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0px 4px 4px #070707);
+          filter: drop-shadow(0px 4px 4px #070707);
 }
 
 .header nav::after {
   content: "";
   width: 100%;
   height: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #828282;
   margin-top: 30px;
 }
-.header ul {
+
+.header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
 }
-.header li a {
-  font-size: 18px;
-  color: #828282;
-}
 
-.header li:not(:last-child) {
+.header nav ul li:not(:last-child) {
   margin-right: 40px;
 }
 
-.header li .active {
-  color: black;
+.header nav ul li .active {
+  color: #070707;
+}
+
+.header nav ul li a {
+  font-size: 18px;
+  color: #828282;
 }
 
 .hero {
@@ -65,11 +78,21 @@
   padding: 100px 0;
   background-color: #f6f6f6;
 }
+
 .about-me .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about-me h2 {
@@ -93,14 +116,23 @@
 
 .skills {
   padding: 103px 0 80px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .skills .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .skills h2 {
@@ -119,21 +151,33 @@
   margin-bottom: 79px;
 }
 
-.skills li:not(:last-child) {
-  margin-right: 90px;
-}
-
 .skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
 }
 
+.skills ul li:not(:last-child) {
+  margin-right: 90px;
+}
+
 .portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: #f6f6f6;
 }
 
@@ -146,7 +190,11 @@
   text-align: center;
 }
 
-.portfolio li {
+.portfolio ul {
+  list-style: none;
+}
+
+.portfolio ul li {
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -154,28 +202,34 @@
   padding-bottom: 129px;
 }
 
-.portfolioli: (: last-child) {
+.portfolio ul li:not(:last-child) {
   padding-bottom: 102px;
 }
 
-.portfolio li a {
+.portfolio ul li a {
   color: #070707;
-}
-.portfolio ul {
-  list-style: none;
 }
 
 .contacts {
   padding: 100px 0 161px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .contacts .container {
   max-width: 937px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contacts h2 {
@@ -193,6 +247,14 @@
   margin-bottom: 78px;
   color: #070707;
 }
+
+.contacts p:last-child {
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #828282;
+}
+
 .contacts button {
   width: 181px;
   height: 42px;
@@ -202,26 +264,28 @@
   line-height: 25px;
   text-align: center;
   letter-spacing: 0.1em;
-  color: #ffffff;
-  background-color: black;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0, 25));
+  color: #fff;
+  background-color: #070707;
+  -webkit-filter: drop-shadow(0px 4px 4px #070707);
+          filter: drop-shadow(0px 4px 4px #070707);
   border-radius: 30px;
 }
 
 .contacts ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
   margin-bottom: 44px;
 }
 
-.contacts li:not(:last-child) {
+.contacts ul li:not(:last-child) {
   margin-right: 61px;
 }
-.contacts p:last-child {
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  color: #828282;
-}
+/*# sourceMappingURL=style.css.map */
